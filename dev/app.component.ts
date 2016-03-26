@@ -6,7 +6,7 @@ import {Component} from 'angular2/core';
       <h3 (click)="onSelect()"
       [class.clicked]="showDeitals===true"
       >{{contact.lastName}} {{contact.firstName}}</h3>
-      <input type="text">
+      <input [(ngModel)]="contact.firstName" type="text">
       <div *ngIf='showDeitals===true'> phone:{{contact.phone}}<br>
       email:{{contact.email}}</div>
     `,

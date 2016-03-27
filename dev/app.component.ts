@@ -1,3 +1,7 @@
+/*
+példa a for loop-ra
+            <li *ngFor="#contact of contacts"
+*/
 import {Component} from 'angular2/core';
 
 @Component({

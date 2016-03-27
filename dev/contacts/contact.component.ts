@@ -9,5 +9,8 @@ import {Component} from 'angular2/core';
     inputs:["contact"]
 })
 export class ContactComponent{
-    public contact={};
+    public contact={
+
+        }
+
 }

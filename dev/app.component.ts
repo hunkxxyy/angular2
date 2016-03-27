@@ -1,3 +1,13 @@
+/*
+a felépítés
+Itt importálja be a componenst
+    import {ContactListComponent} from "./contacts/contact-list.component";
+a templatbe beilleszti a componens selectorát
+    <contact-list></contact-list>
+és hivatkozik rá, mint directiva
+    directives:[ContactListComponent]
+*/
+
 import {Component} from 'angular2/core';
 import {ContactListComponent} from "./contacts/contact-list.component";
 

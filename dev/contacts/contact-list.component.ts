@@ -1,3 +1,6 @@
+/*az AppComponent hívta meg
+ez a fájl meghívja továbbá a  ContactComponent -et a krábban ismertetett nódon*/
+
 import {Component} from 'angular2/core';
 import {ContactComponent} from "./contact.component";
 

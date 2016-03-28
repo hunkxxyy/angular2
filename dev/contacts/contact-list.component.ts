@@ -49,7 +49,7 @@ export class ContactListComponent implements OnInit{
     public selectedContact = null;
     constructor (private _contactService:ContactService){}
     public onSelect(contact) {
-        console.log(contact);
+
         this.selectedContact = contact;
 
     }

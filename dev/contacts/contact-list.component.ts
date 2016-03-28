@@ -35,7 +35,7 @@ import {OnInit} from 'angular2/core';
 
          </li>
     </ul>
- <contact [contact]="selectedContact"></contact>
+ <contact *ngIf="selectedContact!==null" [contact]="selectedContact"></contact>
 
     `,
 
@@ -46,13 +46,7 @@ import {OnInit} from 'angular2/core';
 export class ContactListComponent implements OnInit{
     public contacts:Contact[];
 
-    public selectedContact = {};
-    /*private _contactService: ContactService;
-    constructor (contactService: ContactService ){
-        this._contactService=ContactService;
-
-    }*/
-    /*tömörebb*/
+    public selectedContact = null;
     constructor (private _contactService:ContactService){}
     public onSelect(contact) {
         console.log(contact);

@@ -1,8 +1,6 @@
 /*
-a rout elemei
-4. import {ROUTER_DIRECTIVES} from  'angular2/router'; //a deirectivesbe behivni
-5. import {RouteConfig} from  'angular2/router'; //a @RouteConfig megírni
-
+Route paraméter átadása:
+ path: '/newcontact/:lastName',
 */
 import {Component} from 'angular2/core';
 import {ContactListComponent} from "./contacts/contact-list.component";
@@ -40,6 +38,12 @@ import {RouteConfig} from  'angular2/router';
         name: 'NewContact',
         component: NewContactComponent
     }
+    /* egyserûsítet automatizmus miatt erree nincs szükség,
+    {
+        path: '/newcontact/:lastName',
+        name: 'NewContactFromContact',
+        component: NewContactComponent
+    }*/
 
 
 ])

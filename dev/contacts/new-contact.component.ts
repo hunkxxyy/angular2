@@ -31,10 +31,20 @@ majd inset
  bootstrap(AppComponent,[ROUTER_PROVIDERS]);
             
             */
+
+/*
+OnInit protocol meghívása a core-bol akkkor fut le mikor betöltõdik az oldal
+ez implntálni krll  classexportba
+majd meghívni az onInt methodot, függvény létrehozása ctrl+i
+*/
 import {Component} from 'angular2/core';
 import {ContactService} from './contact.service';
 import {Contact} from "./contact";
 import {Router} from  'angular2/router';
+import {RouteParams} from  'angular2/router';
+import {OnInit} from 'angular2/core';
+
+
 @Component({
 
 
@@ -47,7 +57,7 @@ Create a new comtact
        </div>
        <div>
         <label for="last-name">Last name:</label>
-        <input type="text" id="lastName" #last>
+        <input type="text" id="lastName" value="{{pastedLastName}}" #last>
        </div>
        <div>
             <label for="phone"> phone</label>
@@ -66,8 +76,9 @@ Create a new comtact
     providers:[ContactService],
 
 })
-export class NewContactComponent {
-    constructor(private _contactService:ContactService, private _router:Router){};
+export class NewContactComponent implements OnInit{
+    public pastedLastName='';
+    constructor(private _contactService:ContactService, private _router:Router,private _routeParams:RouteParams){};
     onAddContact(first, last, email,phone){
       let contact: Contact={
           firstName :first,
@@ -80,4 +91,7 @@ export class NewContactComponent {
       this._router.navigate(['Contacts'])
     }
 
+    ngOnInit():any {
+        this.pastedLastName=this._routeParams.get('lastName');
+    }
 }

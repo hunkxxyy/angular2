@@ -1,3 +1,6 @@
+/*
+Tömbe rakunk 4 contact objektumot és tároljuk a CONTACTS constantba
+*/
 import{Contact} from "./contact";
 export const CONTACTS:Contact[]=[
     {firstName: "Max", lastName: "Smith", email: "max@gmail.com"},

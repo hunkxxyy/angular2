@@ -31,7 +31,7 @@ import {OnInit} from 'angular2/core';
         <li *ngFor="#contact of contacts"
          (click)="onSelect(contact)"
       [class.clicked]="selectedContact==contact" >
-      {{contact.lastName}} {{contact.firstName}}
+      {{contact.lastName}} {{contact.firstName | uppercase}}
 
          </li>
     </ul>

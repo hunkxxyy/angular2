@@ -1,12 +1,12 @@
 /*
- 1 integr·l·s
+ 1 integr√°l√°s
  import {ControlGroup} from 'angular2/common';
  import {FormBuilder} from 'angular2/common';
  contollerben:
  myForm:ControlGroup;
  constructor(private _formBuilder:FormBuilder)
-2. formbilter ÈpÌtÈse
- sz¸ksÈges objectek:
+2. formbilter √©p√≠t√©se
+ sz√ºks√©ges objectek:
     import {Validators} from 'angular2/common';
  controllerben:
  ngOnInit():any {
@@ -26,10 +26,10 @@ for attributes
  input atributes
  [ngFormControl] = "myForm.controls['firstName']"
 
- valid·l·s:
+ valid√°l√°s:
  <button type="submit" [disabled]="!myForm.valid" >Create new cobtact</button>
 
- ! a szˆgletes z·rÛjel jelzi a templatben hogy bindig
+ ! a sz√∂gletes z√°r√≥jel jelzi a templatben hogy bindig
  */
 
 import {Component} from 'angular2/core';

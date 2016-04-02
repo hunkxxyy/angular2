@@ -1,20 +1,40 @@
 body {
-  padding: 0px;
-  margin: 0px;
+  padding: 32px;
+  margin: 32px;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
+}
 
+h2 {
+  display: inline-block;
+  border-bottom: 1px solid black;
 }
-.main, header nav{
-  width: 75%;
-  margin: 32px auto;
+
+.property-binding {
+  input {
+    width: 60%;
+  }
 }
-header nav a{
-  border-left: 3px #233dcb;
-  text-decoration: none;
+
+.event-binding {
+  input {
+    width: 30%;
+  }
+}
+
+.highlight {
   font-weight: bold;
+  color: #a41f2f;
 }
-header nav a:hover,
-header nav a:active{
- color: red;
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
 }

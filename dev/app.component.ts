@@ -1,12 +1,13 @@
 /*
 a rout elemei
 4. import {ROUTER_DIRECTIVES} from  'angular2/router'; //a deirectivesbe behivni
-5. import {RouteConfig} from  'angular2/router'; //a @RouteConfig megírni
+5. import {RouteConfig} from  'angular2/router'; //a @RouteConfig megï¿½rni
 
 */
 import {Component} from 'angular2/core';
 import {ContactListComponent} from "./contacts/contact-list.component";
 import {NewContactComponent} from "./contacts/new-contact.component";
+import {DataBindingComponent} from "./BINDING/databinding.component";
 
 import {ROUTER_DIRECTIVES} from  'angular2/router';
 import {RouteConfig} from  'angular2/router';
@@ -17,8 +18,9 @@ import {RouteConfig} from  'angular2/router';
     <header>
         <nav>
 
-            <a [routerLink]="['Contacts']">Contact</a>
-            <a [routerLink]="['NewContact']">New Contact</a>
+
+
+             <a [routerLink]="['BINDING']">BINDING</a> |
         </nav>
     </header>
     <div class="main">
@@ -29,18 +31,12 @@ import {RouteConfig} from  'angular2/router';
 
 })
 @RouteConfig([
-    {
-        path: '/contacts',
-        name: 'Contacts',
-        component: ContactListComponent,
-        useAsDefault:true
-    },
-    {
-        path: '/newcontact',
-        name: 'NewContact',
-        component: NewContactComponent
-    }
 
+    {
+        path: '/BINDING',
+        name: 'BINDING',
+        component: DataBindingComponent
+    }
 
 ])
 export class AppComponent {

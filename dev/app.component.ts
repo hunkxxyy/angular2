@@ -1,48 +1,16 @@
-/*
-Route paraméter átadása:
- path: '/newcontact/:lastName',
-*/
-import {Component} from 'angular2/core';
-import {ContactListComponent} from "./contacts/contact-list.component";
-import {NewContactComponent} from "./contacts/new-contact.component";
 
-import {ROUTER_DIRECTIVES} from  'angular2/router';
-import {RouteConfig} from  'angular2/router';
-import {HTTPTestComponent} from  './http-test.component';
+import {Component} from 'angular2/core';
+import {AttributeDirectives} from './attribute-directives.component';
 
 @Component({
     selector: 'my-app',
     template: `
-    <header>
-        <nav>
-
-            <a [routerLink]="['Contacts']">Contact</a>
-            <a [routerLink]="['NewContact']">New Contact</a>
-        </nav>
-    </header>
-    <div class="main">
-    <router-outlet></router-outlet>
-    <http-test></http-test>
-    </div>
+<my-attribute-directives></my-attribute-directives>
     `,
-    directives: [ContactListComponent,HTTPTestComponent, ROUTER_DIRECTIVES]
+    directives:[AttributeDirectives]
+
 
 })
-@RouteConfig([
-    {
-        path: '/contacts',
-        name: 'Contacts',
-        component: ContactListComponent,
-        useAsDefault:true
-    },
-    {
-        path: '/newcontact',
-        name: 'NewContact',
-        component: NewContactComponent
-    }
-
-
-])
 export class AppComponent {
 
 

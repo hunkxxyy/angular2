@@ -3,7 +3,7 @@ import {listItemType} from './listItemType';
 
 
 @Component({
-    selector: 'shopping-list-new-item-component',
+    selector: 'shopping-list-item-component',
     template: `
       <div class="input">
         <label for="item-name">Name</label>
@@ -13,16 +13,18 @@ import {listItemType} from './listItemType';
         <label for="item-amount">Name</label>
         <input type="text" id="item-amount" [(ngModel)]="item.amount" />
       </div>
-      <button (click)="onClick()">Add Item</button>
+      <button (click)="onDelete()">Delete Item</button>
     `,
-    outputs:['itemAdded']
+    inputs:['item'],
+    outputs:['removed']
 
 })
-export class ShoppingListNewItemComponent {
-    item={name:'Termék', amount:0};
-    itemAdded=new EventEmitter<listItemType>();
-    onClick(){
-        this.itemAdded.emit(this.item);
+export class ShoppingListtemComponent {
+    item={name:'', amount:0};
+    removed=new EventEmitter<listItemType>();
+    onDelete(){
+        this.removed.emit(this.item);
     }
+
 
 }

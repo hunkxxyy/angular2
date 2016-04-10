@@ -23,3 +23,23 @@ header nav a:active{
   padding: 15px;
   margin: 15px;
 }
+.brand{
+  padding:15px;
+  background-color: #000066;
+  color: white;
+}
+section{
+  padding:15px;
+
+  background-color: #ccc;
+  border-bottom: solid 1px #000;
+}
+.input{
+  padding: 15px;
+  display: inline-block;
+
+  label{
+    display: block;
+    font-weight: bold;
+  }
+}

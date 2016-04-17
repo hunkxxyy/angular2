@@ -1,1 +1,1 @@
-http-server
+npm start
